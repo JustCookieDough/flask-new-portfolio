@@ -1,0 +1,91 @@
+
+.content-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-grid {
+    --width: 50rem;
+    --height: 26rem;
+    --gap: 1rem;
+
+    --width-growth: 1rem;
+    --height-growth: .5rem;
+
+    --cell-width: calc((var(--width) - (2*var(--gap))) / 3);
+    --cell-height: calc((var(--height) - (2*var(--gap))) / 3);
+
+    /* background-color: white; */
+
+    width: var(--width);
+    height: var(--height);
+    
+    padding-top: .5rem;
+    display: grid;
+    grid-template-columns: [left] var(--cell-width) [centerleft] var(--cell-width) [centerright] var(--cell-width) [right];
+    grid-template-rows: [top] var(--cell-height)  [centertop] var(--cell-height) [centerbottom] var(--cell-height) [bottom];
+
+    gap: var(--gap);
+}
+
+.project-grid a {
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: var(--8-percent);
+    transition: color .3s, background-color .3s, background .3s;
+    
+    border: solid;
+    border-color: var(--25-percent);
+    border-width: .075rem;
+
+    font-family: "Public Sans", sans-serif;
+    font-size: 1.75rem;
+    color: var(--semi-minor-accent);
+}
+
+.project-grid a:hover {
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--17-percent) 0rem, var(--12-percent) 5rem);
+    color: var(--main-accent);
+    background-color: var(--12-percent);
+}
+
+.project-grid a:link {
+    text-decoration: none;
+}
+
+.project-grid a:visited {
+    text-decoration: none;
+}
+
+.snake  {
+    grid-column: left / centerleft;
+    grid-row: top / centerbottom;
+}
+
+.cooooookies {
+    grid-column: centerright / right;
+    grid-row: centertop / bottom;
+}
+
+.willson {
+    grid-column: left / centerright;
+    grid-row: centerbottom / bottom;
+}
+
+i {
+    font-family: "Jetbrains Mono", 'Courier New', Courier, monospace;   
+    font-style: normal;
+    font-size: 1rem;
+    margin: .5rem 1.75rem 0;
+    text-align: center;
+    color: var(--minor-text-color);
+}
+
+.metronome i {
+    margin: .5rem 3rem 0;
+}

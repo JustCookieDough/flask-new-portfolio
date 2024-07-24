@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/about.css') }}">
+{% endblock%}
+
+{% block content %}
+<h1>About Me</h1>
+<p>Hi, I'm Scott! I'm a front-end developer specializing in Javascript and Python. I've been hacking things together since I was about 7 years old. I started with Python, then moved to Javascript. Along the way I've built dozens of games, apps, and websites.</p>
+<p>When I'm not developing, I'm making music. I'm a singer, bassist, and music producer, so I spend a decent portion of my life working in Logic. After a while, I started writing plugins and tools to solve issues that have gone unnoticed by the development team.</p>
+<h3>I'm proficient in:</h3>
+<ul class="skills">
+    <li>Javascript</li>
+    <li>Python</li>
+    <li>React</li>
+    <li>Node.js</li>
+    <li>BeautifulSoup</li>
+    <li>Web Security</li>
+</ul>
+{% endblock %}

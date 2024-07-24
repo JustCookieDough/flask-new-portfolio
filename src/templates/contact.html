@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/contact.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<div class="email-section">
+    <div class="email-blurb">I'm not actively looking for work at the moment, but if you have questions about programming, music, coffee, or anything else, feel free to reach out!</div>
+    <a href="mailto:scott@angelid.es" target="_blank" class="email-button">Say Hi!</a>
+</div>
+{% endblock%}

@@ -1,0 +1,131 @@
+:root {
+    font-family: 'Jetbrains Mono', 'Courier New', monospace;
+    font-size: min(1.72222222vw, 2.58333333vh);
+}
+
+body.dark {
+    --background: #060913; /* 5 % */
+    --6-percent: #070b17;
+    --7-percent: #090c1b;
+    --8-percent: #0a0e1f;
+    --9-percent: #0b1023; 
+    --10-percent: #0c1126;
+    --12-percent: #0f152f;
+    --15-percent: #121a3a;
+    --17-percent: #151e42; 
+    --20-percent: #18234e;
+    --25-percent: #1f2c61; 
+
+    --text-color: #ffffff;
+    --minor-text-color: #b1bee7;
+
+    --main-accent: #e34b34;
+    --semi-minor-accent: #f96f5a;
+    --minor-accent: #f09c8f;
+    --semi-transparent-main-accent: rgba(227, 75, 52, 0.2);
+}
+
+body.light {
+
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+.content {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+    opacity: 100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+
+    align-self: center;
+    padding: 1rem 0rem 2rem;
+}
+
+.logo {
+    margin-left: 3rem;
+}
+
+.logo:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.logo-text {
+    font-family: 'Gazpacho Black', 'Times New Roman', serif;
+    font-size: 3.5rem;
+    margin: 0;
+    color: var(--text-color);
+    transition: color .1s;
+}
+
+.logo-text:hover {
+    color: var(--main-accent);
+}
+
+.links {
+    padding-right: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.links t { /* i had this text underlining code in another project of mine that never made it public and i know i stole it from somewhere but idk where exactly */
+    margin: 0 .5rem 0;
+    text-decoration: none;
+    transition: text-decoration .25s;
+    display: inline-block;
+    position: relative;
+    color: var(--text-color);
+    transition: color .25s;
+}
+
+.links t:hover {
+    color: var(--main-accent);
+}
+  
+.links t:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: .1rem;
+    bottom: 0;
+    left: 0;
+    background-color: var(--main-accent);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    
+}
+  
+.links t:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.content-body{
+    width: 42.5rem;
+}

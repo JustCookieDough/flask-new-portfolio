@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scott Angelides</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    {% block header_scripts %}
+    <script>
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            window.location.replace("{{ url_for('mobile') }}");
+        }
+    </script>
+    {% endblock %}
+
+    <style>
+@font-face {
+    font-family: Gazpacho Black;
+    src: url("{{ url_for('static', filename='Gazpacho Black.otf') }}");
+}
+
+@font-face {
+    font-family: Jetbrains Mono;
+    src: url("{{ url_for('static', filename="JetBrainsMono.ttf") }}");
+}
+    </style>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Public+Sans">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/base-styles.css') }}">
+    {% block styles %}{% endblock %}
+</head>
+<body class="dark">
+    {% block body_top %}{% endblock %}
+    <div class="content" id="content">
+        <div class="navbar" id="navbar">
+            <a class="logo" id="logo" href="/"><t class="logo-text">sa</t></a>
+            <div class="links">
+                <a href="{{ url_for('about') }}"><t>About Me</t></a>
+                <a href="{{ url_for('projects') }}"><t>Projects</t></a>
+                <a href="{{ url_for('resume') }}"><t>Resume</t></a>
+                <a href="{{ url_for('contact') }}"><t>Contact</t></a>
+            </div>
+        </div>
+
+        <div class="content-body" id="contentBody">
+        {% block content %}{% endblock %}
+        </div>
+    </div>
+{% block scripts %}{% endblock %}
+</body>
+</html>

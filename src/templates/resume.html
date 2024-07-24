@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/resume.css') }}">
+{% endblock %}
+
+{% block content %}
+<iframe class="pdf" src="{{ url_for('static', filename='Resume.pdf') }}"></iframe>
+<a href="{{ url_for('static', filename='Resume.pdf') }}" download="Resume.pdf"><button class="download-button">Download</button></a>
+{% endblock %}

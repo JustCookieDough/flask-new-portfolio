@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}"
+{% endblock %}
+
+{% block body_top %}
+<div class="intro-screen" id="introScreen">
+    <h1 id="l1"></h1>
+    <h1 id="l2"></h1>
+    <h1 id="l3"></h1>
+</div>
+<div class="decorations">
+    <t class="large-background-text">Hello</t>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="name-text-div">
+    <h1 class="name-text">I'm Scott Angelides.</h1>
+    <h2 class="post-name">I do cool things on the internet.</h2>
+</div>
+<p class="blurb">
+    I'm a front-end developer and general technology tinkerer that specializes in rapid prototyping and team leading. When I'm not in front of my computer, I'm making music, and I use the musician mindset on every project I work on.
+</p>
+<a class="link-to-about" href="{{ url_for('about') }}"><t class="link-to-about">Want to learn more about me?</t></a>
+</div> 
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='scripts/index.js') }}"></script>
+{% endblock %}
