@@ -44,4 +44,4 @@ def robots():
 
 # Default port:
 if __name__ == '__main__':
-    app.run(port=os.getenv('PORT'))
+    app.run(host=os.getenv('HOST'), port=os.getenv('PORT'))
