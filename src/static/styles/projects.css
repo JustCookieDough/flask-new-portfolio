@@ -62,7 +62,7 @@
     text-decoration: none;
 }
 
-.snake  {
+.pokemania  {
     grid-column: left / centerleft;
     grid-row: top / centerbottom;
 }
